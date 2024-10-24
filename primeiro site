@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Primeiro Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #0066cc;
+      padding: 10px 0;
+      color: #fff;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004999;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      color: #0066cc;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .about-me, .projects, .contact, .testimonials, .blog {
+      background-color: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #004999;
+    }
+    .fade-in {
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .blog-post {
+      margin-bottom: 20px;
+    }
+    .blog-post h3 {
+      margin: 0;
+    }
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
+      h1, h2 {
+        font-size: 24px;
+      }
+      p, input, textarea {
+        font-size: 14px;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meu Site Pessoal</h1>
+  </header>
+  <nav>
+    <a href="#about-me">Sobre Mim</a>
+    <a href="#projects">Projetos</a>
+    <a href="#contact">Contato</a>
+    <a href="#blog">Blog</a>
+  </nav>
+  <div class="container">
+    <h1 class="fade-in">Bem-vindo ao meu site!</h1>
+    <p>Este é o começo da minha jornada no front-end.</p>
+    <img src="ENSEADAGUARUJA_49.jpg" alt="Uma bela imagem">
+    
+    <section id="about-me" class="about-me">
+      <h2>Sobre Mim</h2>
+      <p>Olá, meu nome é Everton Rodrigues. Sou um entusiasta de tecnologia e estou começando minha jornada no desenvolvimento front-end. Adoro explorar novas tecnologias e criar coisas incríveis.</p>
+    </section>
+    
+    <section id="projects" class="projects">
+      <h2>Meus Projetos</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/EvertonOx/Ebook-Logica-do-Batman"><strong>E-book do Batman</strong></a> - Realizei a criação de um e-book com auxilio de inteligencia artificial, com criação de um repositório no github.
+          <br><img src="everblack._imagine_batman_a_light_with_code_of_logic_c9cb6036-062e-45e0-bde6-8f2766fb3e22_1.png" alt="Imagem do Projeto 1" style="width:100px;height:auto;border-radius:5px;">
+        </li>
+        <li>
+          <a href="https://github.com/EvertonOx/hello-world"><strong>Primeiro passos git/github</strong></a> - Aqui foram meus primeiros passos no github com criação de branch.
+          <br><img src="Github.jpg" alt="Imagem do Projeto 2" style="width:100px;height:auto;border-radius:5px;">
+        </li>
+        <li>
+          <a href="https://github.com/EvertonOx/Meus-Conhecimentos-da-Tecnologia-"><strong>Começo da jornada HTML</strong></a> - O começo da minha jornada no mundo da tecnologia, começo de aprendizados, git e github, entre outras funcionalidades como markdown e inicio do conhecimento em HTML.
+          <br><img src="Html markdow.jpg" alt="Imagem do Projeto 3" style="width:100px;height:auto;border-radius:5px;">
+        </li>
+      </ul>
+    </section>
+    
+    <section id="contact" class="contact">
+      <h2>Contato</h2>
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+      <h2>Comentários</h2>
+      <p>"[Nome] Deixe o comentário" - Pessoa A</p>
+      <p>"[Nome] Deixe o comentário" - Pessoa B</p>
+      <p>"[Nome] Deixe o comentário" - Pessoa C</p>
+    </section>
+    
+    <section id="blog" class="blog">
+      <h2>Blog</h2>
+      <div class="blog-post">
+        <h3>Título do Post 1</h3>
+        <p>Conteúdo do post 1. Este é um exemplo de um post no blog.</p>
+      </div>
+      <div class="blog-post">
+        <h3>Título do Post 2</h3>
+        <p>Conteúdo do post 2. Este é outro exemplo de um post no blog.</p>
+      </div>
+    </section>
+    
+    <button onclick="changeBackgroundColor()">Mudar Cor de Fundo</button>
+  </div>
+  
+  <section id="newsletter" class="newsletter">
+    <h2>Inscreva-se na Newsletter</h2>
+    <form>
+      <label for="newsletter-email">Email:</label>
+      <input type="email" id="newsletter-email" name="newsletter-email" required>
+      <button type="submit">Inscrever</button>
+    </form>
+  </section>
+  
+  <script>
+    function changeBackgroundColor() {
+      document.body.style.backgroundColor = 
+        document.body.style.backgroundColor === 'lightblue' ? '#f0f0f0' : 'lightblue';
+    }
+
+    window.addEventListener('scroll', function() {
+      const scrollPos = window.scrollY;
+      if (scrollPos < 100) {
+        document.body.style.backgroundColor = '#f0f0f0';
+      } else if (scrollPos < 200) {
+        document.body.style.backgroundColor = 'lightblue';
+      } else if (scrollPos < 300) {
+        document.body.style.backgroundColor = 'lightgreen';
+      } else {
+        document.body.style.backgroundColor = 'lightcoral';
+      }
+    });
+  </script>
+</body>
+</html>
